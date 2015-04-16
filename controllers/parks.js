@@ -87,6 +87,7 @@ router.post('/index',function(req,res){
         // res.redirect('/maps');
     })
       }else{
+        console.log("here_____________________?")
         res.send({error:error,response:response});
       }
     }) //end of request
