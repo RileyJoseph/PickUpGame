@@ -17,7 +17,7 @@ router.get("/",function(req,res){
   })
 });
 
-router.get('/', function(req,res){
+router.get('../games', function(req,res){
 // var gameNum = req.params.id;
 //   db.game.find({where: {id: req.params.id}}).then(function(favs){
 //     if (game !== null)
@@ -29,7 +29,7 @@ router.get('/', function(req,res){
 //       })
 // }
 // })
-res.render("games/game");
+res.render("/games/game");
 })
 
 

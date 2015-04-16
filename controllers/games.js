@@ -13,10 +13,9 @@ router.get("/",function(req,res){
   res.render("games/index");
 })
 
-
-// router.get('/', function(req,res){
-//     res.render("games/game");
-// })
+router.get('/', function(req,res){
+    res.render("games/game");
+})
 
 
 // router.get('/',function(req,res){

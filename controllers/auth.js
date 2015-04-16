@@ -3,20 +3,15 @@ var router = express.Router();
 var db = require('../models');
 var bcrypt = require('bcrypt');
 
-router.get('/parks',function(req,res){
-  if(req.getUser()){
-    res.render('parks/index');
-  }else{
-    res.redirect('auth/login');
-  };
-});
-
 
 
 router.get('/signup',function(req,res){
     res.render('auth/signup');
 });
 
+router.get('/login',function(req,res){
+    res.render('auth/login');
+});
 
 //POST /login
 //process login data and login user
@@ -112,6 +107,10 @@ router.post('/signup',function(req,res){
 });
 
 
+router.get('/logout',function(req,res){
+    delete req.session.user;
+    res.redirect('/');
+});
 
 
 module.exports = router;

@@ -17,6 +17,7 @@ app.set("view engine", "ejs");
 //3rd party middleware
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:false}));
+
 app.use(session({
   secret:'qwertyuiopasdfghjkl',
   resave: false,
@@ -30,6 +31,7 @@ app.use(function(req,res,next){
   }
   next();
 });
+
 
 // app.get("/", function(req,res){
 //   // res.send("hello world!")

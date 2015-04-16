@@ -1,17 +1,22 @@
 <% include ../partials/header.ejs %>
+<a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
+<a href="/maps" id="joinGameBtn" class="btn btn-default btn-sm">Join Game Now</a>
+
 <center>
-<br><br><br><br><br><br><br>
+<br><br><br><br><br>
 <div class="col-md-12">
     <h1>Log in and create a game!</h1>
     <form class="form" method="post" action="/auth/login">
         <input type="text" style="width: 400px" class="form-control" placeholder="E-mail" name="email">
         <br><br>
         <input type="password" style="width: 400px"class="form-control" placeholder="Password" name="password">
-        <br><br>
-        <input type="submit" value="log me in" class="btn btn-primary">
+        <br>
+        <input type="submit" value="Login" class="btn btn-primary">
     </form>
+    <br>
+    <a href="/auth/signup" class="btn btn-primary">Create Account</a>
 </div>
 </center>
-<br><br><br><br><br><br><br>
+
 
 <% include ../partials/footer.ejs %>
