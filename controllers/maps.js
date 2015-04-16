@@ -17,7 +17,20 @@ router.get("/",function(req,res){
   })
 });
 
-
+router.get('/', function(req,res){
+// var gameNum = req.params.id;
+//   db.game.find({where: {id: req.params.id}}).then(function(favs){
+//     if (game !== null)
+//           gameNum.game = true;
+//         else {
+//           gameNum.game = false;
+//         }
+//       res.render("games/game", {favs:favs});
+//       })
+// }
+// })
+res.render("games/game");
+})
 
 
 // var fKey = process.env.FSQUARE_KEY

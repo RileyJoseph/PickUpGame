@@ -13,8 +13,6 @@ router.get('/parks',function(req,res){
 
 
 
-
-
 router.get('/signup',function(req,res){
     res.render('auth/signup');
 });

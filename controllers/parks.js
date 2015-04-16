@@ -14,7 +14,6 @@ router.use(bodyParser.urlencoded({extended:false}));
 // })
 
 
-
 router.get('/',function(req,res){
   var query =req.query.q
   var url = 'https://api.foursquare.com/v2/venues/search?client_id=' + 'CJ3HMZQV1XDZ4TL33UFP1KJROPG5Y5XOA0B3XACH22BMYFNV' + "&client_secret=" + 'HY4ISDROTPENA4CS4ADMEQETRIEM4UKDSJHQIVHD3S1YROGF' + "&v=20130815&ll=47.614848,-122.3359058&query=" + query + ' park';
@@ -103,6 +102,11 @@ router.post('/index',function(req,res){
     // //       console.log("test");
     //       console.log(send.location.lat);
     //     }),
+
+router.get('/',function(req,res){
+    delete req.session.user;
+    res.redirect('/');
+});
 
 
 

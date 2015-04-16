@@ -1,9 +1,6 @@
 <% include ../partials/header.ejs %>
-
-
-
-
-<center><h1 style="color:black;">Games</h1></center>
+<a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
+<center><h1 style="color:white;">Games</h1></center>
 <div class="container">
 <div class="row">
   <div class="col-md-6">
@@ -11,7 +8,8 @@
     <div id="map"></div>
     </div>
   </div>
-  <div class="col-md-6 gameList">
+  <div class="col-md-6">
+  <div class="gameList">
     <h2>Games This Week:</h2>
     <table>
     <% for (var i=0; i< favs.length; i++) { %>
@@ -21,6 +19,7 @@
     <tr><%=favs[i].date%></tr></a>&nbsp;
     <% } %>
     </table>
+  </div>
   </div>
 </div>
 </div>
