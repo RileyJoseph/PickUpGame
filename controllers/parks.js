@@ -56,7 +56,7 @@ router.post('/index',function(req,res){
       comments:req.body.comments,
       lat:venues.venue.location.lat,
       lng:venues.venue.location.lng,
-      playerId: req.session.user.id
+      // playerId: req.session.user.id
     }})
     .spread(function(user,created){
         if(created){
