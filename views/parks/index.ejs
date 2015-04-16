@@ -1,0 +1,143 @@
+<% include ../partials/header.ejs %>
+<center>
+<div class="col-md-12">
+    <h1>Create A Game!</h1>
+    <br><br>
+    <form method="get" action="/parks" class='form'>
+  <div class="form-group">
+        <input type="text" name="q" style="width:400px;" class="form-control" id="search-text" placeholder="Search Parks">
+  </div>
+    <input id="savePage" type="submit" value="Search" class="btn btn-primary">
+</form> <h3 style="color:white">Park Results</h3>
+    <form class="form" method="post" action="/parks/index">
+        <select style="width: 400px" name='park' class="form-control">
+          <% venues.forEach(function(venue){ %>
+            <option value="<%= venue.id %>"><%= venue.name%></option>
+          <% }) %>
+        </select>
+    <br><br>
+        <select style="width: 400px" name='sport' class="form-control">
+          <option>Pick a Sport!</option>
+          <option>Basketball</option>
+          <option>Football</option>
+          <option>Soccer</option>
+          <option>Baseball</option>
+          <option>Softball</option>
+          <option>Dodgeball</option>
+          <option>Tennis</option>
+          <option>Kickball</option>
+          <option>Frisbee</option>
+          <option>Pickleball</option>
+          <option>Slack-line</option>
+          <option>Hackie Sack</option>
+          <option>Other - See Comments</option>
+        </select>
+        <br><br>
+        <select style="width: 400px" name="time"class="form-control">
+          <option>Pick a time!</option>
+          <option>1:00 AM</option>
+          <option>1:15 AM</option>
+          <option>1:30 AM</option>
+          <option>1:45 AM</option>
+          <option>2:00 AM</option>
+          <option>2:15 AM</option>
+          <option>2:30 AM</option>
+          <option>2:45 AM</option>
+          <option>3:00 AM</option>
+          <option>3:15 AM</option>
+          <option>3:30 AM</option>
+          <option>3:45 AM</option>
+          <option>4:00 AM</option>
+          <option>4:15 AM</option>
+          <option>4:30 AM</option>
+          <option>4:45 AM</option>
+          <option>5:00 AM</option>
+          <option>5:15 AM</option>
+          <option>5:30 AM</option>
+          <option>5:45 AM</option>
+          <option>6:00 AM</option>
+          <option>6:15 AM</option>
+          <option>6:30 AM</option>
+          <option>6:45 AM</option>
+          <option>7:00 AM</option>
+          <option>7:15 AM</option>
+          <option>7:30 AM</option>
+          <option>7:45 AM</option>
+          <option>8:00 AM</option>
+          <option>8:15 AM</option>
+          <option>8:30 AM</option>
+          <option>8:45 AM</option>
+          <option>9:00 AM</option>
+          <option>9:15 AM</option>
+          <option>9:30 AM</option>
+          <option>9:45 AM</option>
+          <option>10:00 AM</option>
+          <option>10:15 AM</option>
+          <option>10:30 AM</option>
+          <option>10:45 AM</option>
+          <option>11:00 AM</option>
+          <option>11:15 AM</option>
+          <option>11:30 AM</option>
+          <option>11:45 AM</option>
+          <option>Noon</option>
+          <option>1:00 AM</option>
+          <option>1:15 PM</option>
+          <option>1:30 PM</option>
+          <option>1:45 PM</option>
+          <option>2:00 PM</option>
+          <option>2:15 PM</option>
+          <option>2:30 PM</option>
+          <option>2:45 PM</option>
+          <option>3:00 PM</option>
+          <option>3:15 PM</option>
+          <option>3:30 PM</option>
+          <option>3:45 PM</option>
+          <option>4:00 PM</option>
+          <option>4:15 PM</option>
+          <option>4:30 PM</option>
+          <option>4:45 PM</option>
+          <option>5:00 PM</option>
+          <option>5:15 PM</option>
+          <option>5:30 PM</option>
+          <option>5:45 PM</option>
+          <option>6:00 PM</option>
+          <option>6:15 PM</option>
+          <option>6:30 PM</option>
+          <option>6:45 PM</option>
+          <option>7:00 PM</option>
+          <option>7:15 PM</option>
+          <option>7:30 PM</option>
+          <option>7:45 PM</option>
+          <option>8:00 PM</option>
+          <option>8:15 PM</option>
+          <option>8:30 PM</option>
+          <option>8:45 PM</option>
+          <option>9:00 PM</option>
+          <option>9:15 PM</option>
+          <option>9:30 PM</option>
+          <option>9:45 PM</option>
+          <option>10:00 PM</option>
+          <option>10:15 PM</option>
+          <option>10:30 PM</option>
+          <option>10:45 PM</option>
+          <option>11:00 PM</option>
+          <option>11:15 PM</option>
+          <option>11:30 PM</option>
+          <option>11:45 PM</option>
+          <option>Midnight</option>
+        </select>
+        <br><br>
+        <input style="width: 400px"  name="date" class="form-control" placeholder="Date" type="Date">
+        <br><br>
+        <input style="width: 400px"  name="equipment" class="form-control" placeholder="Equipment" type="text">
+        <br><br>
+        <input style="width: 400px" name="comments" type="text" class="form-control" placeholder="Comments" type="text">
+        <br><br>
+</div>
+    <br><br>
+        <input style="width: 400px" type="submit" value="Create Game" class="btn btn-primary">
+    <br><br>
+    </form>
+</center>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,17 @@
+<% include ../partials/header.ejs %>
+<center>
+<br><br><br><br><br><br><br>
+<div class="col-md-12">
+    <h1>Log in and create a game!</h1>
+    <form class="form" method="post" action="/auth/login">
+        <input type="text" style="width: 400px" class="form-control" placeholder="E-mail" name="email">
+        <br><br>
+        <input type="password" style="width: 400px"class="form-control" placeholder="Password" name="password">
+        <br><br>
+        <input type="submit" value="log me in" class="btn btn-primary">
+    </form>
+</div>
+</center>
+<br><br><br><br><br><br><br>
+
+<% include ../partials/footer.ejs %>

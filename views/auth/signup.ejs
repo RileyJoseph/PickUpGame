@@ -1,0 +1,23 @@
+<% include ../partials/header.ejs %>
+<center>
+<div class="col-md-12">
+    <h1>Sign up!</h1>
+    <form class="form" method="post" action="/auth/signup">
+        <input style="width: 400px" type="text" class="form-control" placeholder="Enter your e-mail" name="email">
+        <br><br>
+        <input style="width: 400px" type="text" class="form-control" placeholder="Enter your name" name="name">
+        <br><br>
+        <input style="width: 400px" type="password" class="form-control" placeholder="Choose a password" name="password">
+        <br><br>
+        <input style="width: 400px" type="password" class="form-control" placeholder="Re-type your password" name="password2">
+        <br><br>
+        <input style="width: 400px" type="text" class="form-control" placeholder="Enter your city" name="city">
+        <br><br>
+        <input style="width: 400px" type="text" class="form-control" placeholder="Enter your favorite sport" name="favoriteSport">
+        <br><br>
+        <input style="width: 400px" type="submit" value="sign up" class="btn btn-primary">
+    </form>
+</div>
+</center>
+<br><br><br><br><br><br>
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,31 @@
+<% include ../partials/header.ejs %>
+
+
+
+
+<center><h1 style="color:black;">MAP TEST</h1></center>
+<div class="container">
+<div class="row">
+  <div class="col-md-6">
+    <div id="map"></div>
+  </div>
+  <div class="col-md-6 gameList">
+    <h2>Games</h2>
+    <table>
+    <% for (var i=0; i< favs.length; i++) { %>
+    <div id="Divider" style="height:5px;"><hr /></div>
+    <a href="#"><tr><%=favs[i].sport%></tr>&nbsp;
+    <tr><%=favs[i].time%></tr>&nbsp;
+    <tr><%=favs[i].date%></tr></a>&nbsp;
+    <% } %>
+    </table>
+  </div>
+</div>
+</div>
+
+
+  <script>
+    var myPoints = <%- JSON.stringify(favs) %>;
+    drawMap(myPoints)
+  </script>
+</body>
