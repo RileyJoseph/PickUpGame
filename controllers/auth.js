@@ -3,13 +3,15 @@ var router = express.Router();
 var db = require('../models');
 var bcrypt = require('bcrypt');
 
-router.get('/login',function(req,res){
-  // if(req.getPlayer()){
-  //   res.render('games/index');
-  // }else{
-    res.render('auth/login');
-  });
-// });
+router.get('/parks',function(req,res){
+  if(req.getUser()){
+    res.render('parks/index');
+  }else{
+    res.redirect('auth/login');
+  };
+});
+
+
 
 
 
