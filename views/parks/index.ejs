@@ -3,30 +3,30 @@
 <a href="/maps" id="joinGameBtn" class="btn btn-default btn-sm">Join Game</a>
   <center>
     <h1>Create a Game!</h1>
-    <br><br>
       <div class="col-md-2">
       </div>
       <div class="col-md-4">
         <form method="get" action="/parks" class='form'>
-          <h3 style="color:white">Find your park</h3>
+          <h3>Find your park</h3>
           <div class="form-group">
-            <input type="text" name="q" style="width:400px;" class="form-control" id="search-text" placeholder="Search Parks and choose below">
+            <input type="text" name="q" style="width:400px;" class="form-control" id="search-text" placeholder="Search Parks and choose -------------------------------------------------->">
             <br>
             <input id="savePage" type="submit" value="Search" class="btn btn-primary">
             <br><br>
+        </div>
+        </form>
+<!--         <h3 style="color:white">Pick the place!</h3> -->
+        <br><br>
+      </div>
+      <div class="col-md-4">
+        <h3>Game Details!</h3>
+    <form class="form" method="post" action="/parks/index">
          <select style="width: 400px" name='park' class="form-control">
           <% venues.forEach(function(venue){ %>
           <option value="<%= venue.id %>"><%= venue.name%></option>
           <% }) %>
         </select>
-          </div>
-        </form>
-<!--         <h3 style="color:white">Pick the place!</h3> -->
-        <br><br>
-      </div>
-    <form class="form" method="post" action="/parks/index">
-      <div class="col-md-4">
-        <h3 style="color:white">Game Details!</h3>
+        <br>
         <select style="width: 400px" name='sport' class="form-control">
           <option>Pick a Sport!</option>
           <option>Basketball</option>

@@ -1,34 +1,33 @@
-<% include partials/header%>
+<% include ../partials/header%>
 
 <!-- SELECTED GAME PAGE -->
-
-<h2>Game Details:</h2>
-
-
-<div class="row">
-  <div class="col-md-10">
-    <div class="form-group">
-    <h3 id="head" class="list-item addBtn"><%favs[i].sporte%>
-    <form class="form put-form" action="/favorites">
-      <input type="hidden" name="imdbID" value="<%favs[i].sport%>">
-      <input type="hidden" name="Title" value="<%=favs[i].time %>">
-      <input type="hidden" name="Year" value="<%=favs[i].date%>">
-      <input type="hidden" name="Poster" value="<%=favs[i].equipment%>">
-    </form>
-    </div>
-</h3>
+<center>
+<h1 style="font-size:34px; margin-top: 20px;">Game Creater: <%=players.name%></h1>
+<br>
+</center>
+<div class="col-md-6">
+ <div id="map"></div>
+<br>
+</div>
+<div style:"margin-left:8px;" class="col-md-6 thegame">
 <table>
-    <div id="Divider" style="height:5px;"><hr /></div>
-    <tr>Staring: <%=favs[i].sport%></tr>
-    <br>
-    <br>
-    <tr>Year: <%=favs[i].time%></tr>
-    <br><br>
-    <tr>Rated: <%=favs[i].date%></tr>
-    <br><br>
-    <tr>Director: <%=favs[i].equipment%></tr>
-    <br><br>
-    <tr>Writers: <%=favs[i]comments%></tr>
+<h1 style="margin-top:5px;"id="gameHeader">Game <%=games.id%> Details:</h1>
+      <div id="Divider" style="height:10px;"><hr /></div>
+      <tr>Sport: <%=games.sport%></tr>
+      <br>
+      <tr>Time: <%=games.time%></tr>
+      <br>
+      <tr>Date: <%=games.date%></tr>
+      <br>
+      <tr>Equipment: <%=games.equipment%></tr>
+      <br>
+      <tr>Comments: <%=games.comments%></tr>
+  </table>
 </div>
-</div>
+
+<script>
+    var myPoints = <%- JSON.stringify(games) %>;
+    drawMap(myPoints)
+  </script>
+
 <% include ../partials/footer%>

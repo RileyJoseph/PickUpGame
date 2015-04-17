@@ -18,23 +18,22 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   },
-{
-  hooks: {
-      beforeCreate: function(player,options,sendback){
-        bcrypt.hash(player.password,10,function(err,hash){
-          if(err){ throw err; }
-          player.password=hash;
-          sendback(null,player);
-        });
-      }
-  }
-},
-{
+  {
+    hooks: {
+        beforeCreate: function(player,options,sendback){
+          bcrypt.hash(player.password,10,function(err,hash){
+            if(err){ throw err; }
+            player.password=hash;
+            sendback(null,player);
+          });
+        }
+    },
     classMethods: {
       associate: function(models) {
         models.player.hasMany(models.game)
       }
     }
-});
+  }
+);
   return player;
 };

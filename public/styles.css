@@ -1,5 +1,5 @@
 body{
-  background: url("./park4.jpg");
+  background: url("./grasspic22.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10,19 +10,39 @@ body{
 #map{
   width: 100%;
   height: 500px;
-  z-index: 0;
+  border: 4px black;
+}
+#mapCon{
+  /*border: 4px black;*/
 }
 
 h1{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 60px;
-  color: white;
+  color: rgba(0,10,10,.9);
   font-weight: 100;
+  margin-top: 80px;
 }
+
+h2{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h3{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: rgba(0,10,10,.9);
+}
+
+.subtitle{
+    font-size: 3.5em;
+    color: rgba(0,10,10,.9);
+    margin: 50px auto 185px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
 
 .mainTitle {
   font-size: 5.5em;
-  margin: 100px auto 235px;
+  /*margin: 100px auto 235px;*/
 }
 
 #dropdown{
@@ -40,7 +60,7 @@ ul{
 #signInBtn{
   color: white;
   background-color: rgba(0,0,0,.4);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   font-weight: 100;
   margin-right: 5px;
@@ -50,8 +70,8 @@ ul{
 #logOutBtn{
   color: white;
   background-color: rgba(0,0,0,.4);
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
   font-weight: 100;
   margin-top: 8px;
   margin-right: 5px;
@@ -62,8 +82,8 @@ ul{
 #joinGameBtn{
   color: white;
   background-color: rgba(0,0,0,.4);
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
   font-weight: 100;
   margin-top: 8px;
   margin-right: 5px;
@@ -73,7 +93,7 @@ ul{
 #signUpBtn{
   color: white;
   background-color: rgba(0,0,0,.4);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   font-weight: 100;
   border: none;
@@ -82,7 +102,7 @@ ul{
 #createBtn{
   color: white;
   background-color: rgba(0,0,0,.6);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 28px;
   font-weight: 100;
   margin-right: 5px;
@@ -93,9 +113,25 @@ ul{
 #joinBtn{
   color: white;
   background-color: rgba(0,0,0,.6);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 28px;
+  font-weight: 100;
   margin-left: 5px;
+}
+.thegame{
+  margin-left: 8px;
+  padding-bottom: 8px;
+  height: auto;
+  width: 600px;
+  overflow: auto;
+  background-color: rgba(255,255,255,.7);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+#gameHeader{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: black;
 }
 
 .gameList {

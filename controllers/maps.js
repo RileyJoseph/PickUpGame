@@ -12,7 +12,7 @@ router.use(bodyParser.urlencoded({extended:false}));
 
 router.get("/",function(req,res){
   db.game.findAll().then(function(favs){
-    console.log(favs[0]);
+    // console.log(favs[0]);
     res.render("maps/index", {favs:favs});
   })
 });

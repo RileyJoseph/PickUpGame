@@ -1,8 +1,7 @@
 <% include ../partials/header.ejs %>
 <a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
 <a href="/auth/login" id="logOutBtn" class="btn btn-default btn-sm">Log in</a>
-
-<center><h1 style="color:white;">Games</h1></center>
+<center><h1 style="margin-top: 1px;">Games</h1></center>
 <div class="container">
 <div class="row">
   <div class="col-md-6">
@@ -16,7 +15,8 @@
     <table>
     <% for (var i=0; i< favs.length; i++) { %>
     <div id="Divider" style="height:5px;"><hr /></div>
-    <a href="/games/game"><tr><%=favs[i].sport%></tr>&nbsp;
+    <a href="/games/<%= favs[i].id %>"><tr># <%=favs[i].id%></tr>&nbsp;
+    <tr><%=favs[i].sport%></tr>&nbsp;
     <tr><%=favs[i].time%></tr>&nbsp;
     <tr><%=favs[i].date%></tr></a>&nbsp;
     <% } %>
@@ -27,8 +27,9 @@
 </div>
 
 
-  <script>
+<script>
     var myPoints = <%- JSON.stringify(favs) %>;
     drawMap(myPoints)
   </script>
+  <br><br>
 </body>

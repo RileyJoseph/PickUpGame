@@ -1,3 +1,32 @@
+
+var db = require('./models');
+
+
+db.player.find({
+  where:{id:6},
+  include:[db.game]
+}).then(function(user){
+
+    console.log(user.name);
+    user.games.forEach(function(game){
+      console.log('...',game.sport);
+    })
+
+});
+
+
+
+// db.player.find(6).then(function(user){
+//   user.getGames().then(function(games){
+//     console.log(user.name);
+//     games.forEach(function(game){
+//       console.log('...',game.sport);
+//     })
+//     // console.log(user.get());
+//   })
+// });
+
+
 // var express = require('express');
 // var app = express();
 // var fKey = process.env.FSQUARE_KEY
