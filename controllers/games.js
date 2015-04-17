@@ -36,11 +36,11 @@ router.get('/:id', function(req,res){
     include:[db.player]
   }).then(function(games){
       console.log("__________",games.sport);
-      // games.player.(function(players){
+      // games.player(function(players){
       //   db.game.find({where:{id:req.params.id}}).then(function(thegame){
         // console.log('...',players.name);
-    // res.send(games)
-    res.render("games/game",{games:games,players:player});
+    // res.send(players)
+    res.render("games/game",{games:games,player:games.player});
       })
     // });
     // console.log(game.get())
