@@ -91,7 +91,7 @@
           <option>11:30 AM</option>
           <option>11:45 AM</option>
           <option>Noon</option>
-          <option>1:00 AM</option>
+          <option>1:00 PM</option>
           <option>1:15 PM</option>
           <option>1:30 PM</option>
           <option>1:45 PM</option>
@@ -140,11 +140,15 @@
         <br>
         <input style="width: 400px"  name="date" class="form-control" placeholder="Date" type="Date">
         <br>
-        <input style="width: 400px"  name="equipment" class="form-control" placeholder="Equipment" type="text">
+        <select style="width: 400px" name="equipment" class="form-control">
+          <option>I've got it!</option>
+          <option>We could use something... See Comments</option>
+        </select>
+        <!-- <input style="width: 400px"  name="equipment" class="form-control" placeholder="Equipment" type="text"> -->
         <br>
         <input style="width: 400px" name="comments" type="text" class="form-control" placeholder="Comments" type="text">
         <br>
-        <input style="width: 400px" type="submit" value="Create Game" class="btn btn-primary">
+        <input style="width: 400px" type="submit" id="savePage" value="Create Game" class="btn btn-primary">
       </div>
 
     <div class="col-md-2">

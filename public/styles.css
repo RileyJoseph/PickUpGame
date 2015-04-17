@@ -90,9 +90,19 @@ ul{
   border: none;
 }
 
-#signUpBtn{
+#savePage{
   color: white;
   background-color: rgba(0,0,0,.4);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  border-color: black;
+  /*border: none;*/
+}
+
+#signUpBtn{
+  color: white;
+  background-color: rgba(0,0,0,.6);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   font-weight: 100;
@@ -124,6 +134,7 @@ ul{
   height: auto;
   width: 600px;
   overflow: auto;
+  font-weight: 100;
   background-color: rgba(255,255,255,.7);
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
