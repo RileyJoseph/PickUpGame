@@ -55,5 +55,9 @@ app.get('/maps',function(req,res){
     res.render('maps/index');
 });
 
+app.get('/about',function(req,res){
+  res.render('about/index');
+});
+
 app.listen(process.env.PORT || 3000)
 // window.onload = loadScript;

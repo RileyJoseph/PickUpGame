@@ -1,9 +1,13 @@
 body{
-  background: url("./grasspic22.jpg");
+  background: url("./grasspic22.jpg") center center;
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 480px){
+  background-image: url(./grasspicmobile.jpg);
 }
 
 
@@ -14,6 +18,35 @@ body{
 }
 #mapCon{
   /*border: 4px black;*/
+}
+
+#aboutBtn{
+  color: white;
+  background-color: rgba(0,0,0,.4);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  margin-top: 8px;
+  margin-right: 5px;
+  margin-left: 8px;
+  border: none;
+}
+
+#aboutBody{
+  background-color: rgba(0,0,0,.6);
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  max-width: 1000px;
+  /*font-weight: 100;*/
+}
+
+
+#info{
+  background-color: rgba(0,0,0,.2);
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-weight: 100;
 }
 
 h1{
@@ -36,7 +69,7 @@ h3{
 .subtitle{
     font-size: 3.5em;
     color: rgba(0,10,10,.9);
-    margin: 50px auto 185px;
+    margin: 50px auto 145px;
     font-family: 'Josefin Sans', sans-serif;
   }
 
