@@ -22,7 +22,9 @@ var drawMap = function(markers) {
 
    markers.forEach(function(marker) {
     console.log(marker);
-    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.sport + "Game # " + marker.id)
+    L.marker([marker.lat, marker.lng]).addTo(map).bindPopup(marker.sport + " Game # " + marker.id)
    })
+
+   map.scrollWheelZoom.disable();
 }
 

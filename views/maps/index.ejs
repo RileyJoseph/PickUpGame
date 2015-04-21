@@ -1,7 +1,7 @@
 <% include ../partials/header.ejs %>
-<body style="overflow:hidden;">
+<!-- <body style="overflow:hidden;"> -->
     <!-- Page contents -->
-</body>
+<!-- </body> -->
 <a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
 <a href="/auth/login" id="logOutBtn" class="btn btn-default btn-sm">Log in</a>
 <center><h1 style="margin-top: 1px;">Games</h1></center>
@@ -21,7 +21,7 @@
     <a href="/games/<%= favs[i].id %>"><tr># <%=favs[i].id%></tr>&nbsp;
     <tr><%=favs[i].sport%></tr>&nbsp;
     <tr><%=favs[i].time%></tr>&nbsp;
-    <tr><%=favs[i].date.getMonth() +"/" +favs[i].date.getDate()%></tr></a>&nbsp;
+    <tr><%=favs[i].date.getMonth() + 1+"/" +favs[i].date.getDate()%></tr></a>&nbsp;
     <% } %>
     </table>
   </div>
