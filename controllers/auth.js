@@ -24,7 +24,7 @@ router.post('/login',function(req,res){
                 if(err) throw err;
 
                 if(result){
-                  console.log(req.session)
+                  // console.log(req.session)
                     //store user to session!!
                     req.session.user={
                         id:user.id,
@@ -35,7 +35,7 @@ router.post('/login',function(req,res){
                     res.redirect('/');
                 }else{
                   console.log('else 1')
-                    // req.flash('danger','Invalid password.');
+                    req.flash('danger','Invalid password.');
                     res.redirect('/auth/login');
                 }
             })
