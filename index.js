@@ -51,9 +51,6 @@ app.get("/",function(req,res){
   res.render("index");
 })
 
-app.get('/maps',function(req,res){
-    res.render('maps/index');
-});
 
 app.get('/about',function(req,res){
   res.render('about/index');
