@@ -1,5 +1,6 @@
 <% include ../partials/header.ejs %>
 <a href="/" id="aboutBtn" class="btn btn-default btn-sm">Home</a>
+<% if (!user){%>
 <a href="/auth/login" id="topLogin" class="btn btn-default btn-sm">Login</a>
 <% } %>
 <% if (user){%>
