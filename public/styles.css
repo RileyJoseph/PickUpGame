@@ -94,6 +94,15 @@ h3{
     color: rgba(0,10,10,.9);
 }
 
+tr{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+}
+
+th{
+  padding-right: 80px;
+}
+
 .subtitle{
     font-size: 3.5em;
     color: rgba(0,10,10,.9);

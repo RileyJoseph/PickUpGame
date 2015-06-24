@@ -55,7 +55,8 @@ app.get("/",function(req,res){
 
 
 app.get('/about',function(req,res){
-  res.render('about/index');
+    var user = req.getUser();
+  res.render('about/index',{user:user});
 });
 
 app.listen(process.env.PORT || 3000)

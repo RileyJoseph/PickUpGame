@@ -1,45 +1,48 @@
 <% include ../partials/header.ejs %>
 <!-- <body style="overflow:hidden;"> -->
-    <!-- Page contents -->
+<!-- Page contents -->
 <!-- </body> -->
 <a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
-<% if (!user){%>
-<a href="/auth/login" id="topLogin" class="btn btn-default btn-sm">Login</a>
-<% } %>
-<% if (user){%>
-<a href="/auth/logout" id="topLogout" class="btn btn-default btn-sm">Logout</a>
-<% } %>
+
 
 <!-- <a href="/auth/login" id="logOutBtn" class="btn btn-default btn-sm">Log in</a> -->
 <center><h1 style="margin-top: 1px;">Games</h1></center>
 <div class="container">
-<div class="row">
-  <div class="col-md-6">
-   <div id="mapCon">
-    <div id="map"></div>
+  <div class="row">
+    <div class="col-md-6">
+     <div id="mapCon">
+      <div id="map"></div>
     </div>
   </div>
   <div class="col-md-6">
-  <div class="gameList">
-    <h2>Games This Week:</h2>
-    <table>
-    <% for (var i=0; i< favs.length; i++) { %>
-    <div id="Divider" style="height:5px;"><hr /></div>
-    <a href="/games/<%= favs[i].id %>"><tr># <%=favs[i].id%></tr>&nbsp;
-    <tr><%=favs[i].sport%></tr>&nbsp;
-    <tr><%=favs[i].time%></tr>&nbsp;
-    <tr><%=favs[i].date.getMonth() + 1+"/" +favs[i].date.getDate()%></tr></a>&nbsp;
-    <% } %>
-    </table>
-  </div>
+    <div class="gameList">
+      <h2>Games This Week:</h2>
+      <table>
+        <tr>
+          <th>Game ID</th>&nbsp;
+          <th>Sport</th>&nbsp;
+          <th>Time</th>&nbsp;
+          <th>Date</th>&nbsp;
+        </tr>
+        <% for (var i=0; i< favs.length; i++) { %>
+        <tr>
+          <td># <%=favs[i].id%></td>&nbsp;
+          <td><%=favs[i].sport%></td>&nbsp;
+          <td><%=favs[i].time%></td>&nbsp;
+          <td><%=favs[i].date.getMonth() + 1+"/" +favs[i].date.getDate()%></td>
+        <!-- <div id="Divider" style="height:5px;"><hr /></div> -->
+        </tr>&nbsp;
+        <% } %>
+      </table>
+    </div>
   </div>
 </div>
 </div>
 
 
-  <script>
-    var myPoints = <%- JSON.stringify(favs) %>;
-    drawMap(myPoints)
-  </script>
-  <br><br>
+<script>
+  var myPoints = <%- JSON.stringify(favs) %>;
+  drawMap(myPoints)
+</script>
+<br><br>
 </body>
