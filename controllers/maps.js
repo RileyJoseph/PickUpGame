@@ -8,38 +8,15 @@ var bcrypt = require('bcrypt')
 
 
 router.get("/",function(req,res){
+  var user = req.getUser();
   db.game.findAll().then(function(favs){
     // console.log(favs[0]);
+    console.log("NEW CONSOLE LOG", favs)
     res.render("maps/index", {favs:favs});
+  console.log(user);
   })
 });
 
-router.get('../games', function(req,res){
-// var gameNum = req.params.id;
-//   db.game.find({where: {id: req.params.id}}).then(function(favs){
-//     if (game !== null)
-//           gameNum.game = true;
-//         else {
-//           gameNum.game = false;
-//         }
-//       res.render("games/game", {favs:favs});
-//       })
-// }
-// })
-res.render("/games/game");
-})
-
-
-// var fKey = process.env.FSQUARE_KEY
-// var fSecret = process.env.FSQUARE_SECRET
-
-
-// router.get("/",function(req,res){
-//   db.game.findAll().then(function(location){
-//   console.log(location);
-//   res.render("maps/index", {location:location});
-// })
-// });
 
 
 

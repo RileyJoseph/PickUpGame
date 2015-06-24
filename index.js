@@ -48,7 +48,9 @@ app.use("/parks", parksCtrl);
 
 
 app.get("/",function(req,res){
-  res.render("index");
+  var user = req.getUser();
+  console.log("user",user)
+  res.render("index",{user:user});
 })
 
 

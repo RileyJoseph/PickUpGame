@@ -1,23 +1,31 @@
 <% include partials/header.ejs %>
+
 <a href="/about" id="aboutBtn" class="btn btn-default btn-sm">About</a>
+<% if (!user){%>
+<a href="/auth/login" id="topLogin" class="btn btn-default btn-sm">Login</a>
+<% } %>
+<% if (user){%>
+<a href="/auth/logout" id="topLogout" class="btn btn-default btn-sm">Login</a>
+<% } %>
+
 <div class="container text-center">
   <h1 class="mainTitle">Pick-Up Games</h1>
   <h2 class="subtitle">get out and play</h2>
   <p>
     <a href="/parks/create">
-    <button id="createBtn" class="btn btn-default btn-lg">C r e a t e G a m e</button>
+      <button id="createBtn" class="btn btn-default btn-lg">C r e a t e G a m e</button>
     </a>
     <a href="/maps">
-    <button id="joinBtn" class="btn btn-default btn-lg">J o i n G a m e</button>
+      <button id="joinBtn" class="btn btn-default btn-lg">J o i n G a m e</button>
     </a>
   </p>
 <br>
-<p>
-<div id="Divider" style="height:5px;"><hr /></div>
-<div class="container" id="info">
-Designed to bring people together and keep you in the game,
-Pick-Up Games is an application for users to find or create sports games in their neighborhood.
-When these games get posted, others can see what sport, where, and what time so that they can come play! Sign-up to create a game or click join to jump right in.
-</div>
+  <p>
+  <div id="Divider" style="height:5px;"><hr /></div>
+  <div class="container" id="info">
+  Designed to bring people together and keep you in the game,
+  Pick-Up Games is an application for users to find or create sports games in their neighborhood.
+  When these games get posted, others can see what sport, where, and what time so that they can come play! Sign-up to create a game or click join to jump right in.
+  </div>
 </p>
 </div>

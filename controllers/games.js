@@ -15,15 +15,16 @@ router.get("/",function(req,res){
 
 
 router.get('/:id', function(req,res){
+  console.log("here")
   db.game.find({
     where:{id:req.params.id},
     include:[db.player]
   }).then(function(games){
       // console.log("__________",games.sport);
+    console.log("NEW CONSOLE LOG",games)
     res.render("games/game",{games:games,player:games.player});
       })
     // });
-    // console.log(game.get())
   // })
 });
 

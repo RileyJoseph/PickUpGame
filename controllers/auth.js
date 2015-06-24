@@ -34,12 +34,13 @@ router.post('/login',function(req,res){
                     req.flash('success','You have been logged in.');
                     res.redirect('/');
                 }else{
-                  console.log('else 1')
+                  console.log('INVALID PASSWORD')
                     req.flash('danger','Invalid password.');
                     res.redirect('/auth/login');
                 }
             })
         }else{
+            console.log("Unknown User")
             req.flash('danger','Unknown user. Please sign up.');
             res.redirect('/auth/login');
         }

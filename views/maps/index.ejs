@@ -3,7 +3,8 @@
     <!-- Page contents -->
 <!-- </body> -->
 <a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
-<a href="/auth/login" id="logOutBtn" class="btn btn-default btn-sm">Log in</a>
+
+<!-- <a href="/auth/login" id="logOutBtn" class="btn btn-default btn-sm">Log in</a> -->
 <center><h1 style="margin-top: 1px;">Games</h1></center>
 <div class="container">
 <div class="row">
@@ -30,7 +31,7 @@
 </div>
 
 
-<script>
+  <script>
     var myPoints = <%- JSON.stringify(favs) %>;
     drawMap(myPoints)
   </script>
