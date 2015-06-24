@@ -1,5 +1,10 @@
 <% include ../partials/header.ejs %>
 <a href="/" id="aboutBtn" class="btn btn-default btn-sm">Home</a>
+<a href="/auth/login" id="topLogin" class="btn btn-default btn-sm">Login</a>
+<% } %>
+<% if (user){%>
+<a href="/auth/logout" id="topLogout" class="btn btn-default btn-sm">Login</a>
+<% } %>
 <div class="container">
   <h1 class="mainTitle">Pick-Up Games</h1>
   <div class="container" id="aboutBody">
