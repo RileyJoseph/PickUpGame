@@ -25,18 +25,15 @@ During the same call to the database, the rest of the game info is called and pu
 Sessions is used to prevent non-users from posting games.
 
 #Approach:
-What seems like years ago, I started with my wireframe (presumably attached somewhere) which gave me a concept
+Starting with a wireframe (presumably attached somewhere), I was able to solidify a concept
 for a design layout. From there I was able to determine which technologies I'd need to get a basic structure down.
-Next, I set arranged folders in my main director to meet what I had determined to be my needs.
+Next, I arranged folders in my main director to meet what I had determined to be my needs.
 I began with the first page, two buttons, one that would require sign-up/create a game and one that would go to the map page.
 I built the game page next, setting up my database for games and players (users) which overlap on playerId.
 After, I did the map page so the points would rend. Then, I struggled through getting sessions operational because
 my routes/calls had gotten mixed up when I made an extra game page. When I got that, I fixed the layout of most pages
 so it wasn't as horrible looking, built another page that gave the details to a game and got stuck...
 
-#Unsolved problems:
-When I made my second map page, I wasn't able to render the single point representing the game.
-The park search generally starts with a parking lot.
 
 #To Do:
 Changing the markers
