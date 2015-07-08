@@ -1,38 +1,38 @@
 <% include ../partials/header%>
 <body style="overflow:hidden;">
-    <!-- Page contents -->
+  <!-- Page contents -->
 </body>
 <a href="/" id="logOutBtn" class="btn btn-default btn-sm">Home</a>
 <a href="/maps" id="joinGameBtn" class="btn btn-default btn-sm">Games</a>
 <!-- SELECTED GAME PAGE -->
 <center>
-<h1 style="font-size:34px; margin-top: 20px;">Game Creater: <%=player.name%></h1>
-<br>
+  <h1 style="font-size:34px; margin-top: 20px;">Game Creater: <%=player.name%></h1>
+  <br>
 </center>
 <div class="col-md-6">
  <div id="map"></div>
-<br>
+ <br>
 </div>
 <div style:"margin-left:8px;" class="col-md-6 thegame">
-<table>
-<h1 style="margin-top:5px;"id="gameHeader">Game <%=games.id%> Details:</h1>
-      <div id="Divider" style="height:10px;"><hr /></div>
-      <tr><%=games.sport%></tr>
-      <br>
-      <tr>Time: <%=games.time%></tr>
-      <br>
-      <tr>Date: <%=games.date.getMonth() +"/" +games.date.getDate()%></tr>
-      <br>
-      <tr>Equipment: <%=games.equipment%></tr>
-      <br>
-      <tr>Comments: <%=games.comments%></tr>
+  <table>
+    <h1 style="margin-top:5px;"id="gameHeader">Game <%=games.id%> Details:</h1>
+    <div id="Divider" style="height:10px;"><hr /></div>
+    <tr><%=games.sport%></tr>
+    <br>
+    <tr>Time: <%=games.time%></tr>
+    <br>
+    <tr>Date: <%=games.date.getMonth() +"/" +games.date.getDate()%></tr>
+    <br>
+    <tr>Equipment: <%=games.equipment%></tr>
+    <br>
+    <tr>Comments: <%=games.comments%></tr>
   </table>
 </div>
 <br><br>
 
 <script>
-    var myPoints = <%- JSON.stringify(games) %>;
-    drawMap(myPoints)
+  var myPoints = <%- JSON.stringify(games) %>;
+  drawMap(myPoints)
 </script>
 
 <% include ../partials/footer%>
