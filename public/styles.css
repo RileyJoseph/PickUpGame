@@ -110,6 +110,14 @@ th{
     font-family: 'Josefin Sans', sans-serif;
   }
 
+.preTitle{
+    font-size: 2.5em;
+    color: rgba(0,10,10,.9);
+    margin-bottom: -50px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
+
 .mainTitle {
   font-size: 5.5em;
   /*margin: 100px auto 235px;*/
